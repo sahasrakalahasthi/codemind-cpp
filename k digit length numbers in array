@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int countDigit(long long n)
+{
+   if(n == 0)
+     return 1;
+    int count = 0;
+    while (n != 0)
+    {
+        n = n / 10;
+        ++count;
+    }
+    return count;
+}
+ 
+int main(){
+    int n,count,rem,k,c=0;
+    int a[100];
+    cin>>n;
+    cin>>k;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        if(countDigit(a[i])==k){
+            c++;
+        }
+    }
+    cout<<c;
+}
